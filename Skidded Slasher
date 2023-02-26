@@ -849,7 +849,7 @@ A2.Position = Vector3.new(0, 0, -4)
 local ts1 = Instance.new('Trail', part2)
 ts1.Attachment0 = A1
 ts1.Attachment1 = A2
-ts1.Texture = "http://www.roblox.com/asset/?id=1978704853"
+ts1.Texture = "http://www.roblox.com/asset/?id=19787048530"
 ts1.LightEmission = 1
 ts1.Transparency = NumberSequence.new(0, 0.5, 1)
 ts1.Color = ColorSequence.new(BrickColor.new('Royal Blue').Color,BrickColor.new('Cyan').Color)
@@ -1020,26 +1020,6 @@ hum.Health = 0
 hum:ChangeState(8)
 
 
-local TweenService = game:GetService("TweenService")
-local MakeTween = function(timetack,easingstyle,easingdirection,repeats,flipflop)
-	local newtween = TweenInfo.new(
-		timetack, 
-		easingstyle, 
-		easingdirection, 
-		repeats, 
-		flipflop, 
-		0 
-	)
-	return newtween
-end
-local DOTWEEN = function(Part,tim,value)
-	local Tween = MakeTween(tim,Enum.EasingStyle.Circular,Enum.EasingDirection.InOut,0,false)
-	TweenService:Create(Part,Tween,{C0= value}):Play()
-end
-local LerpStyle = function(lerpmagnet,easingstyle,easingdirection)
-	local newstyle = TweenService:GetValue(lerpmagnet,easingstyle,easingdirection)
-	return newstyle
-end
 
 local cf = CFrame.new
 local v3_101 = v3(1, 0, 1)
@@ -1789,7 +1769,7 @@ weld1.C0 = weld1.C0:Lerp(cf(0, -0.5, 0.5) * angles(0, -1.57070, 0), 0.2)
 weld2.C0 = weld2.C0:Lerp(cf(0, -0.5, 0) * angles(0, 0, 0), 0.2)
 RootJoint.C0 = RootJoint.C0:Lerp(cf(0, 0.07 * sin((sine - 1) * 1), 0) * angles(-1.7453292519943295, 0 + humanoidRootPart.RotVelocity.Y / -35, 3.141592653589793 - 0.2617993877991494 * sin((sine - 1) * 0.5)), 0.2)  
   Neck.C0 = Neck.C0:Lerp(cf(0, 1, 0) * angles(-1.5707963267948966, 0, 3.141592653589793 + humanoidRootPart.RotVelocity.Y / 15 + 0.2617993877991494 * sin((sine - 1) * 0.5)), 0.2)
-LeftHip.C0 = LeftHip.C0:Lerp(cf(-1, -1.1 - 0.2 * sin(sine * 0.5), 0.4 * sin(sine * 0.5)) * angles(-0.08726646259971647 * sin(sine * 0.5), -1.5707963267948966, 0.2617993877991494 + 0.6981317007977318 * sin((sine - 2) * 0.5)), 0.2,LerpStyle(2,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut))  RightShoulder.C0 = RightShoulder.C0:Lerp(cf(1, 0.5, 0) * angles(-1.1344640137963142, 1.6580627893946132 - 0.3490658503988659 * sin((sine - 1) * 0.5), 1.5707963267948966 - 0.5235987755982988 * sin((sine - 1) * 0.5)), 0.2)  LeftShoulder.C0 = LeftShoulder.C0:Lerp(cf(-1, 0.2 + 0.1 * sin((sine - 1) * 1), 0.3) * angles(0, -1.5707963267948966, -1.2217304763960306 + 0.08726646259971647 * sin((sine - 1) * 1)), 0.2)  RightHip.C0 = RightHip.C0:Lerp(cf(1, -1.1 + 0.2 * sin(sine * 0.5), -0.4 * sin(sine * 0.5)) * angles(-0.08726646259971647 * sin(sine * 0.5), 1.5707963267948966, -0.2617993877991494 + 0.6981317007977318 * sin((sine - 2) * 0.5)), 0.2)  --LeftLeg,-1,0,0,0.5,-0,-5,0,0.5,-1.1,-0.2,0,0.5,-90,0,0,0.5,0,0.4,0,0.5,15,40,-2,0.5,Torso,0,0,0,0.5,-100,0,0,0.5,0,0.07,-1,1,-0,0,0,0.5,0,0,0,0.5,180,-15,-1,0.5,RightArm,1,0,0,0.5,-65,0,0,0.5,0.5,0,0,0.5,95,-20,-1,0.5,0,0,0,0.5,90,-30,-1,0.5,LeftArm,-1,0,0,0.5,-0,-0,0,0.5,0.2,0.1,-1,1,-90,0,0,0.5,0.3,0,-1,1,-70,5,-1,1,Head,0,0,0,0.5,-90,0,0,0.5,1,0,0,0.5,-0,0,0,0.5,0,0,0,0.5,180,15,-1,0.5,RightLeg,1,0,0,0.5,0,-5,0,0.5,-1.1,0.2,0,0.5,90,0,0,0.5,0,-0.4,0,0.5,-15,40,-2,0.5
+LeftHip.C0 = LeftHip.C0:Lerp(cf(-1, -1.1 - 0.2 * sin(sine * 0.5), 0.4 * sin(sine * 0.5)) * angles(-0.08726646259971647 * sin(sine * 0.5), -1.5707963267948966, 0.2617993877991494 + 0.6981317007977318 * sin((sine - 2) * 0.5)), 0.2)  RightShoulder.C0 = RightShoulder.C0:Lerp(cf(1, 0.5, 0) * angles(-1.1344640137963142, 1.6580627893946132 - 0.3490658503988659 * sin((sine - 1) * 0.5), 1.5707963267948966 - 0.5235987755982988 * sin((sine - 1) * 0.5)), 0.2)  LeftShoulder.C0 = LeftShoulder.C0:Lerp(cf(-1, 0.2 + 0.1 * sin((sine - 1) * 1), 0.3) * angles(0, -1.5707963267948966, -1.2217304763960306 + 0.08726646259971647 * sin((sine - 1) * 1)), 0.2)  RightHip.C0 = RightHip.C0:Lerp(cf(1, -1.1 + 0.2 * sin(sine * 0.5), -0.4 * sin(sine * 0.5)) * angles(-0.08726646259971647 * sin(sine * 0.5), 1.5707963267948966, -0.2617993877991494 + 0.6981317007977318 * sin((sine - 2) * 0.5)), 0.2)  --LeftLeg,-1,0,0,0.5,-0,-5,0,0.5,-1.1,-0.2,0,0.5,-90,0,0,0.5,0,0.4,0,0.5,15,40,-2,0.5,Torso,0,0,0,0.5,-100,0,0,0.5,0,0.07,-1,1,-0,0,0,0.5,0,0,0,0.5,180,-15,-1,0.5,RightArm,1,0,0,0.5,-65,0,0,0.5,0.5,0,0,0.5,95,-20,-1,0.5,0,0,0,0.5,90,-30,-1,0.5,LeftArm,-1,0,0,0.5,-0,-0,0,0.5,0.2,0.1,-1,1,-90,0,0,0.5,0.3,0,-1,1,-70,5,-1,1,Head,0,0,0,0.5,-90,0,0,0.5,1,0,0,0.5,-0,0,0,0.5,0,0,0,0.5,180,15,-1,0.5,RightLeg,1,0,0,0.5,0,-5,0,0.5,-1.1,0.2,0,0.5,90,0,0,0.5,0,-0.4,0,0.5,-15,40,-2,0.5
 game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = 14
 end
 end
