@@ -1724,9 +1724,16 @@ end)
 
 
 while event:Wait() do
-if humanoidRootPart.Position.Y < -70 then
-    humanoidRootPart.CFrame = CFrame.new(-150, 40, 100)
-  end
+if humanoidRootPart.Position.Y < -70 or humanoidRootPart.Position.Y > 500 or humanoidRootPart.Velocity.Magnitude > 250 then
+    humanoidRootPart.CFrame = CFrame.new(-130, 30, 80)
+    for i = 0, 20 do
+if event:Wait() then
+    humanoidRootPart.Velocity = Vector3.new(0, 0, 0)
+    else
+break
+end
+end
+end
     sine += 0.2
     local torvel = (game.Players.LocalPlayer.Character.Humanoid.MoveDirection * Vector3.new(1, 0, 1)).magnitude
     
